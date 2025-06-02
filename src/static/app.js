@@ -32,7 +32,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 ? `<ul>${details.participants
                     .map(
                       (participant) =>
-                        `<li>${participant}</li>`
+                        `<li>
+                          <span class="participants-avatar">${participant[0].toUpperCase()}</span>
+                          ${participant}
+                        </li>`
                     )
                     .join("")}</ul>`
                 : "<em>No participants yet</em>"
